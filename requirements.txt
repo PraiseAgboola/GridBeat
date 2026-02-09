@@ -1,0 +1,7 @@
+FastAPI
+uvicorn
+playwright
+sqlalchemy
+aiohttp
+python-dotenv
+pydantic
