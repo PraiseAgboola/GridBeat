@@ -1,36 +1,64 @@
-# GridHeartbeat Nigeria
+# GridHeartbeat Nigeria System Documentation
 
-This is the documentation for the GridHeartbeat Nigeria project. The project focuses on providing real-time grid status prediction and notifications using various technologies.
+## Overview
+GridHeartbeat is a robust system designed to monitor and report the operational status of grid infrastructures in Nigeria, enabling stakeholders to make informed decisions regarding grid management and maintenance.
 
-## Project Structure
+## Architecture Overview
+The GridHeartbeat system is composed of several key components:
+1. **Data Aggregator**: Collects data from various grid points.
+2. **Data Processor**: Analyzes the collected data to identify trends and anomalies.
+3. **User Interface**: A web-based interface for users to visualize data and generate reports.
+4. **Database**: Stores the historical data for retrieval and analysis.
+5. **API**: Enables communication between the frontend and the backend services.
 
-- **replit.nix:** Nix configuration for Playwright installation.
-- **main.py:** FastAPI backend entry point.
-- **app/scraper.py:** Playwright scraper for NISO and NigGrid.
-- **app/database.py:** SQLite database models and operations.
-- **app/rocof_calculator.py:** RoCoF calculation engine.
-- **app/grid_logic.py:** Grid status prediction logic.
-- **app/whatsapp_gateway.py:** IPC/API bridge to Node.js WhatsApp service.
-- **whatsapp_service.js:** Node.js WhatsApp notification handler.
-- **static/index.html:** Frontend dashboard with Tailwind CSS.
-- **static/dashboard.js:** Chart.js real-time visualization.
-- **requirements.txt:** Python dependencies.
-- **package.json:** Node.js dependencies.
-- **.gitignore:** Git ignore file.
-- **README.md:** Project documentation.
+## Setup Instructions
+1. **Prerequisites**:
+   - Node.js (version 14 or higher)
+   - MongoDB (version 4.0 or higher)
+   
+2. **Clone the repository**:
+   ```bash
+   git clone https://github.com/PraiseAgboola/GridBeat.git
+   cd GridBeat
+   ```
 
-## Installation
+3. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-### Python Dependencies
+4. **Configure Environment Variables**:
+   Create a `.env` file in the root directory and set the necessary variables based on the `.env.example` file.
 
-To install the Python dependencies, run:
-```bash
-pip install -r requirements.txt
-```
+5. **Run the Application**:
+   ```bash
+   npm start
+   ```
 
-### Node.js Dependencies
+## Deployment Guide
+To deploy the GridHeartbeat system, follow these steps:
+1. **Prepare the Server**:
+   - Ensure that the server meets the system requirements.
+   - Install necessary software (Node.js, MongoDB).
 
-To install the Node.js dependencies, run:
-```bash
-npm install
-```
+2. **Clone the Repository on the Server**:
+   ```bash
+   git clone https://github.com/PraiseAgboola/GridBeat.git
+   cd GridBeat
+   ```
+
+3. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+
+4. **Set Environment Variables** and ensure they match your production settings.
+
+5. **Start the Application**:
+   You can start the application in the background using PM2 or similar process managers:
+   ```bash
+   pm2 start server.js
+   ```
+
+## Conclusion
+This documentation provides a comprehensive overview of the GridHeartbeat system. For further inquiries or contributions, please reach out to the repository owner or the project collaborators.
